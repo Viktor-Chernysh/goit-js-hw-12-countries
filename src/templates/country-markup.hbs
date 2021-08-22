@@ -1,9 +1,7 @@
-<div class="country-card">
+
 {{#each this}}
 <div class="card">
-  <div class="card-img">
-    <img src={{flag}} alt={{name}} width="200">
-  </div>
+  
   <div class="card-body">
     <h2 class="card-tittle">{{name}}</h2>
     <p class="card-text">Capital: {{capital}}</p>
@@ -13,9 +11,11 @@
     {{#each languages}}
     <li class="list-languages-item">{{name}}</li>
     {{/each}}
-    </ul>
-
+    </ul> 
+  </div>
+  <div class="card-img">
+    <img src={{flag}} alt={{name}} width="200">
   </div>
 </div>
   {{/each}}
-  </div>
+ 
