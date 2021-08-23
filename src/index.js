@@ -14,6 +14,7 @@ refs.input.addEventListener('input', debounce(onSearchInput, 500));
 function onSearchInput() {
   refs.countries.innerHTML = '';
   const searchQuery = refs.input.value.trim()
+  if (searchQuery === '') { return}
   fetchCountries(searchQuery).then(countries => renderCountries(countries)).catch(err => info({text: 'Please enter you request correctly!', delay: 2000})) 
 };
 
